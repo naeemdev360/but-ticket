@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex w-full">
+      <div class="flex-1">
+        <h3>Select your seat</h3>
+        <div class="flex flex-col gap-5" id="seats"></div>
+      </div>
+      <div class="basis-[30%]">
+        <h3>Select your seat</h3>
+        <div class="bg-gray-200 p-3">
+          <div class="flex justify-between">
+            <h4>Seat</h4>
+            <h4>Class</h4>
+            <h4>Price</h4>
+          </div>
+          <div id="selected-seats"></div>
+          <div class="flex justify-between mt-10">
+            <h4>Total Price</h4>
+            <h4 id="total-price">BDT 0</h4>
+          </div>
+          <div class="flex gap-2">
+            <input id="coupon-input" type="text" class="flex-1" />
+            <button id="applyBtn" class="bg-green-500 p-2 text-white">
+              Apply
+            </button>
+          </div>
+          <div class="flex justify-between">
+            <h4>Grand total</h4>
+            <h4 id="grand-price">BDT 0</h4>
+          </div>
+        </div>
+        <button id="nextBtn" class="mt-10 w-full flex-1 bg-green-500">
+          Next
+        </button>
+      </div>
+    </div>
+    <div
+      id="modal"
+      class="fixed top-0 left-0 w-screen h-screen z-10 backdrop-blur-sm hidden justify-center items-center"
+    >
+      <div class="w-20 h-20 bg-white border">Modal</div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
